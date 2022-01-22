@@ -109,6 +109,7 @@ func UpdateTaskFunction(task models.Task)(returnData utilities.ResponseJSON){
 		task.DueDate= oldTask.DueDate
 		
 	}
+	task.UserId=oldTask.UserId
 
 	if utilities.IsEmpty(task.Status){
 		task.Status=oldTask.Status
